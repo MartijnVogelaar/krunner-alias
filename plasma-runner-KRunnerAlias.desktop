@@ -1,0 +1,15 @@
+[Desktop Entry]
+Name=KRunnerAlias
+Comment= KRunnerAlias allows you to use aliases defined in ~/.bashrc.
+X-KDE-ServiceTypes=Plasma/Runner
+Type=Service
+Icon=Terminal
+X-KDE-PluginInfo-Author=Martijn Vogelaar
+X-KDE-PluginInfo-Email=martijn.j.vogelaar@outlook.com
+X-KDE-PluginInfo-Name=KRunnerAlias
+X-KDE-PluginInfo-Version=1.0
+X-KDE-PluginInfo-License=GPL-3.0
+X-KDE-PluginInfo-EnabledByDefault=true
+X-Plasma-API=DBus
+X-Plasma-DBusRunner-Service=org.kde.KRunnerAlias
+X-Plasma-DBusRunner-Path=/KRunnerAlias
