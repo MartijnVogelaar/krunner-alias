@@ -23,7 +23,7 @@ Which effectively means that the following is executed: `kate ~/test.txt`.
 
 
 # Defining aliases
-Aliases have to be defined as they are supposed to be in a `.bashrc-file`. Aliases have the following formats:
+Aliases have to be defined as they are supposed to be in a `.bashrc`-file. Aliases have the following formats:
 
 ```
 alias ${name}=${command}
