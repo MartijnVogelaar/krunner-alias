@@ -27,9 +27,9 @@ class Runner(dbus.service.Object):
         bashrcLines = bashrc.readlines()
         for line in bashrcLines:
             try:
-                parsed = re.search('alias ([^ =]+)=([^\s].+)', line)
+                parsed = re.search('alias ([^ =]+)=([^ \t\n\r\f\v].+)', line)
                 name = parsed.group(1)
-                command = re.search('(?<=\')(.+)(?=\'[ ]*$|\'[ ]*#)|(?<=")(.+)(?="[ ]*$|"[ ]*#)|^(?!["\'#])(\S+(?=[ ]*#)|\S+$)',parsed.group(2))
+                command = re.search('(?<=\')(.+)(?=\'[ ]*$|\'[ ]*#)|(?<=")(.+)(?="[ ]*$|"[ ]*#)|^(?!["\'#])([^ \t\n\r\f\v]+(?=[ ]*#)|[^ \t\n\r\f\v]+$)',parsed.group(2))
                 if(command):
                     self.aliases[name] = (Alias(name,command.group(0)))
             except AttributeError as e:
